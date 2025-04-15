@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Book Lending System</title>
+  <script src="script.js" defer></script>
+  <style>
+    body { font-family: sans-serif; padding: 20px; }
+    section { margin-bottom: 30px; }
+    input, select, button { margin: 5px 0; padding: 5px; display: block; }
+  </style>
+</head>
+<body>
+  <h1>📚 Book Lending System</h1>
+
+  <section>
+    <h2>🔐 Register User</h2>
+    <form id="registerForm">
+      Username: <input name="username" required>
+      Password: <input type="password" name="password" required>
+      Role:
+      <select name="role">
+        <option value="lender">Lender</option>
+        <option value="admin">Admin</option>
+      </select>
+      <button type="submit">Register</button>
+    </form>
+  </section>
+
+  <section>
+    <h2>➕ Add Book</h2>
+    <form id="bookForm">
+      Title: <input name="title" required>
+      Author: <input name="author" required>
+      ISBN: <input name="isbn">
+      Year: <input name="publication_year" type="number">
+      Genre: <input name="genre">
+      Copies: <input name="copies" type="number" value="1">
+      <button type="submit">Add Book</button>
+    </form>
+  </section>
+</body>
+</html>
