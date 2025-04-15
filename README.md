@@ -70,6 +70,7 @@ Register a new user.
 }
 
 
-Execution steps 
+
+### Execution steps 
 Cargo build
 Cargo run
