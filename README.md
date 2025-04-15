@@ -56,3 +56,6 @@ Listed in Cargo.toml:
 - lendings: Tracks borrow/return history
 
 
+### Execution steps
+Cargo build
+Cargo run
