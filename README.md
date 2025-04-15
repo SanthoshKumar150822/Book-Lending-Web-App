@@ -57,5 +57,5 @@ Listed in Cargo.toml:
 
 
 ### Execution steps
-Cargo build
-Cargo run
+1.Cargo build
+2.Cargo run
