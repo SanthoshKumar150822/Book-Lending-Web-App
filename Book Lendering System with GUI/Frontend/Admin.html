@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin - Book Management</title>
+  <link rel="stylesheet" href="admin.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <section class="admin-container" id="main">
+    <div class="books-left">
+      <img src="Images/Bookmark.png" class="book" alt="">
+      <img src="Images/magic-book.png" class="book" alt="">
+      <img src="Images/book3.png" class="book" alt="">
+    </div>
+    <div class="books-right">
+      <img src="Images/open-book.png" class="book" alt="">
+      <img src="Images/book4.png" class="book" alt="">
+      <img src="Images/spellbook.png" class="book" alt="">
+    </div>
+
+    <div class="form-box blur" id="addBookForm">
+      <h2>Add New Book</h2>
+      <form id="bookForm">
+        <div class="inputBox">
+          <input type="text" id="title" placeholder="Title" required />
+        </div>
+        <div class="inputBox">
+          <input type="text" id="author" placeholder="Author" required />
+        </div>
+        <div class="inputBox">
+          <input type="text" id="isbn" placeholder="ISBN" required />
+        </div>
+        <div class="inputBox">
+          <input type="text" id="year" placeholder="Publication Year" required />
+        </div>
+        <div class="inputBox">
+          <input type="text" id="genre" placeholder="Genre / Category" required />
+        </div>
+        <div class="inputBox">
+          <input type="number" id="copies" placeholder="Number of Copies" required />
+        </div>
+        <div class="inputBox">
+          <select id="status">
+            <option value="">Book Status</option>
+            <option value="Available">Available</option>
+            <option value="Checked Out">Checked Out</option>
+          </select>
+        </div>
+        <div class="inputBox">
+          <input type="submit" value="Add Book" />
+        </div>
+      </form>
+    </div>
+  </section>
+  <div id="pre">
+    <pre>
+
+
+
+    </pre>
+  </div>
+    <section class="admin-container" id="bookRecordsSection">
+      <div class="books-section">
+        <h3>Book Records</h3>
+        <div class="inputBox">
+          <input type="text" id="searchBox" placeholder="Search by Title or Author" />
+        </div>
+        <div class="books-list" id="bookList"></div>
+      </div>
+    </section>
+    <div id="adminDashboard">
+      <div class="books-left">
+        <img src="Images/Bookmark.png" class="book" alt="">
+        <img src="Images/magic-book.png" class="book" alt="">
+        <img src="Images/book3.png" class="book" alt="">
+      </div>
+      <div class="books-right">
+        <img src="Images/open-book.png" class="book" alt="">
+        <img src="Images/book4.png" class="book" alt="">
+        <img src="Images/spellbook.png" class="book" alt="">
+      </div>
+      <div class="hamburger" onclick="toggleDashboardMenu()">☰</div>
+      <div class="dashboard-menu" id="dashboardMenu">
+        <button onclick="showDashboardSection('dashboardBooks')">📚 View All Books</button>
+        <button onclick="showDashboardSection('dashboardUsers')">👤 View Users</button>
+        <button onclick="showDashboardSection('dashboardBorrowed')">📖 Borrowed Books</button>
+        <button onclick="showDashboardSection('dashboardOverdue')">⏰ Overdue Books</button>
+      </div>
+    </div>
+    <div id="dashboardBooks" class="dashboard-section"><h2>All Books</h2></div>
+    <div id="dashboardUsers" class="dashboard-section"><h2>All Users</h2></div>
+    <div id="dashboardBorrowed" class="dashboard-section"><h2>Borrowed books </h2></div>
+    <div id="dashboardOverdue" class="dashboard-section"><h2>Overdue books </h2></div>
+    <script src="admin.js"></script>
+</body>
+</html>

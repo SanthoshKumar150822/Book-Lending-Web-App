@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(to bottom, #f1f4f9, #dff1ff);
+  min-height: 100vh;
+  padding: 30px;
+  overflow-x: hidden;
+}
+.books-section h3
+{
+
+  text-align: center;
+}
+.admin-container {
+  max-width: 600px;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.3);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.admin-container h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.inputBox {
+  position: relative;
+  width: 100%;
+  margin: 15px 0;
+}
+
+.inputBox input {
+  width: 100%;
+  padding: 10px 20px;
+  border: 1px solid rgba(0,0,0,0.2);
+  border-radius: 8px;
+  background: rgba(255,255,255,0.5);
+  color: #000;
+  font-size: 16px;
+  outline: none;
+}
+
+.inputBox input[type="submit"] {
+  background-color: #000;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.inputBox input[type="submit"]:hover {
+  background-color: #333;
+}
+
+/* Book list styling */
+.book-list {
+  margin-top: 30px;
+}
+
+.book-card {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+.book-card h3 {
+  margin-bottom: 10px;
+}
+
+.book-card p {
+  margin: 3px 0;
+}
+
+.book-card .delete-btn {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  background: transparent;
+  color: red;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* Floating book animations */
+.books-left,
+.books-right {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.books-left {
+  left: 20px;
+}
+
+.books-right {
+  right: 20px;
+}
+
+.book {
+  width: 60px;
+  animation: float 3s ease-in-out infinite;
+}
+
+.book:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.book:nth-child(3) {
+  animation-delay: 1s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(3deg);
+  }
+}
+
+.inputBox input,
+.inputBox select {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  border-radius: 35px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: #000;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  font-family: 'Poppins', sans-serif;
+}
+
+.inputBox select option {
+  color: black;
+}
+
+.status-box {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .status-box.available {
+    background-color: rgba(0, 255, 0, 0.1);
+    color: limegreen;
+    border: 1px solid limegreen;
+  }
+  
+  .status-box.checkedout {
+    background-color: rgba(255, 0, 0, 0.1);
+    color: red;
+    border: 1px solid red;
+  }
+  
+  .notify-btn, .edit-btn {
+    padding: 6px 14px;
+    border: none;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .notify-btn {
+    background: linear-gradient(45deg, #ff4e50, #f9d423);
+    color: white;
+    box-shadow: 0 3px 10px rgba(255, 78, 80, 0.3);
+  }
+  
+  .notify-btn:hover {
+    transform: scale(1.05);
+    background: linear-gradient(45deg, #f16548, #ffdb3a);
+  }
+  
+  .edit-btn {
+    background: linear-gradient(45deg, #00c6ff, #0072ff);
+    color: white;
+    box-shadow: 0 3px 10px rgba(0, 114, 255, 0.3);
+  }
+  
+  .edit-btn:hover {
+    transform: scale(1.05);
+    background: linear-gradient(45deg, #0085ff, #005ae0);
+  }
+  
+  #searchBox {
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 35px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 1px solid rgba(0,0,0,0.1);
+    color: #000;
+    margin-bottom: 20px;
+  }
+  .admin-dashboard {
+    margin: 2rem auto;
+    max-width: 900px;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 1rem;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+  }
+  
+  .admin-dashboard h3 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+  }
+  
+  .dashboard-section {
+    margin-bottom: 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 1rem;
+  }
+  
+  .dashboard-section h4 {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #ffeb3b;
+  }
+  
+  .dashboard-section p {
+    margin: 0.3rem 0;
+    font-size: 0.95rem;
+  }
+  
+  .notify-btn {
+    background-color: #ff4d4d;
+    color: white;
+    padding: 0.3rem 0.6rem;
+    margin-top: 0.3rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .notify-btn:hover {
+    background-color: #e60000;
+  }
+
+#adminDashboard {
+  position: relative;
+  color: black;
+  font-family: Arial, sans-serif;
+}
+
+.hamburger {
+  position: fixed;
+  top: 15px;
+  right: 20px;
+  font-size: 32px;
+  cursor: pointer;
+  z-index: 1000;
+  color: black;
+}
+
+.dashboard-menu {
+  display: none;
+  position: fixed;
+  top: 60px;
+  right: 20px;
+  background: white;
+  box-shadow: 0 0 10px #888;
+  border-radius: 8px;
+  z-index: 999;
+  padding: 10px;
+}
+
+.dashboard-menu button {
+  display: block;
+  width: 100%;
+  margin-bottom: 8px;
+  padding: 10px;
+  border: none;
+  background-color: #f5f5f5;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: left;
+}
+
+.dashboard-section {
+  display: none;
+  padding: 20px;
+  background-color: #fff;
+  margin: 105px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ddd;
+  width:1100px;
+  margin-top:0px;
+}
+.dashboard-menu button:hover {
+  background-color: #ddd;
+}
+
+.dashboard-section h2
+{
+  text-align: center;
+  align-items: center;
+}
