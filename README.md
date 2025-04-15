@@ -56,21 +56,3 @@ Listed in Cargo.toml:
 - lendings: Tracks borrow/return history
 
 
-## REST API Documentation
-
-### POST /register
-Register a new user.
-
-*Request:*
-```json
-{
-  "username": "john_doe",
-  "password": "secure123",
-  "role": "admin"
-}
-
-
-
-### Execution steps 
-Cargo build
-Cargo run
